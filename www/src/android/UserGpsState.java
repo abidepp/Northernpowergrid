@@ -22,6 +22,7 @@ public class UserGpsState extends CordovaPlugin {
       }
       String message;
       String duration;
+      String gpsState;
 
       try {
         JSONObject options = args.getJSONObject(0);
