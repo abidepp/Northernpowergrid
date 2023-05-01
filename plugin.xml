@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-UserGpsState" version="0.0.1">
+    <name>UserGpsState</name>
+    <description>An Android Cordova plugin that allows to find the user device's gps state.</description>
+    <license>MIT</license>
+    <keywords>cordova,android,toast,message,alert</keywords>
+    <repo>https://github.com/abidepp/Northernpowergrid.git</repo>
+    <issue>https://github.com/abidepp/Northernpowergrid/issues</issue>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <js-module src="www/usergpsstate.js" name="usergpsstate">
+        <clobbers target="window.plugins.usergpsstate" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="UserGpsState">
+                <param name="android-package" value="com.northernpowergrid.cordova.plugin.UserGpsState"/>
+            </feature>
+        </config-file>
+        <source-file src="www/src/android/UserGpsState.java" target-dir="www/src/com/northernpowergrid/cordova/plugin" />
+    </platform>
+</plugin>

@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-usergpsstate",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows to find the user device's gps state.",
+  "cordova": {
+    "id": "cordova-plugin-usergpsstate",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abidepp/Northernpowergrid.git"
+  },
+  "keywords": [
+    "Location",
+    "Notification",
+    "GPS",
+    "Alert",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "NorthernPowergrid <itintf@ius.biz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abidepp/Northernpowergrid/issues"
+  },
+  "homepage": "https://github.com/abidepp/Northernpowergrid"
+}
