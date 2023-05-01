@@ -45,7 +45,7 @@ public class UserGpsState extends CordovaPlugin {
 
       // Send a positive result to the callbackContext
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
-      callbackContext.sendPluginResult(gpsState);
+      callbackContext.sendPluginResult(pluginResult, gpsState);
       return true;
   }
 }
