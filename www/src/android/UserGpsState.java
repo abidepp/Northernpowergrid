@@ -35,7 +35,7 @@ public class UserGpsState extends CordovaPlugin {
 
       //check device gps state
       LocationManager locationManager = (LocationManager) cordova.getActivity().getSystemService(cordova.getActivity().LOCATION_SERVICE);
-      gpsState = (locationManager != null && locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) ? "True" : "False";
+      gpsState = (locationManager != null && locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) ? "1" : "0";
 
       // Create the toast
       Toast toast = Toast.makeText(cordova.getActivity(), gpsState,
