@@ -22,7 +22,7 @@ public class UserGpsState extends CordovaPlugin {
       }
       String message;
       String duration;
-      String gpsState;
+      int gpsState;
 
       try {
         JSONObject options = args.getJSONObject(0);
@@ -35,13 +35,13 @@ public class UserGpsState extends CordovaPlugin {
 
       //check device gps state
       LocationManager locationManager = (LocationManager) cordova.getActivity().getSystemService(cordova.getActivity().LOCATION_SERVICE);
-      gpsState = (locationManager != null && locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) ? "1" : "0";
+      gpsState = (locationManager != null && locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) ? 1: 0;
 
       // Create the toast
-      Toast toast = Toast.makeText(cordova.getActivity(), gpsState,
-        DURATION_LONG.equals(duration) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
-      // Display toast
-      toast.show();
+      // Toast toast = Toast.makeText(cordova.getActivity(), gpsState,
+      //   DURATION_LONG.equals(duration) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT);
+      // // Display toast
+      // toast.show();
 
       // Send a positive result to the callbackContext
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, gpsState);
